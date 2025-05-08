@@ -1,1 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySqlConnector;
 
+namespace csaba
+{
+    internal class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            string sqlkapcs = "server=localhost;database=diakolimpia;user=root;password=;";
+            string sql = "SELECT Csapatok FROM DiakolimpiaRoplabda where CsoportID = D;" +
+                "SELECT Jatekosok FROM DiakolimpiaRoplabda where CsapatID = 1;" +
+                "SELECT Jatekosok FROM DiakolimpiaRoplabda where CsapatNev = `Egri Egyszarvúak`;" +
+                "SELECT Edzook FROM DiakolimpiaRoplabda where CsapatNev = `Egri Egyszarvúak`;";
+            Console.WriteLine("Leirja a D csopotban levö csapatok nevét," +
+                " Egyes csapat játékosait, az Egri Egyszarvúak játékosait és az Egri Egyszarvúak edzöjét");
+
+
+        }
+    }
+}
